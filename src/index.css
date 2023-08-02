@@ -1,0 +1,47 @@
+body{
+  margin: 0;
+}
+
+header{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-block: 10px;
+  justify-content: space-around;
+  background: #0D1821;
+  color: white;
+}
+
+header .site-logo{
+  margin-right: auto;
+}
+
+header a {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  padding: 5px 20px;
+}
+
+.header-elem{
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+
+}
+
+
+.title{
+  text-align: center;
+}
+
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #0D1821;
+  color: white;
+  text-align: center;
+}
+
