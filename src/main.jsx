@@ -4,6 +4,7 @@ import './index.css'
 import Home from './routes/home';
 import Layout from './components/layout';
 import Bio from './routes/bio';
+import Projects from './routes/projects';
 import {
   createRoutesFromElements,
   createBrowserRouter,
@@ -13,23 +14,30 @@ import {
 
 
 
+
 const router = createBrowserRouter([
+
   {
-  path: "/", 
-  element: <Layout />, 
+    path: "/BennyMach.com/", 
+    element: <Layout />, 
     children: [
       {
       index: true, 
       element: <Home /> 
-    }, 
-    {
+     }, 
+     {
       path: "bio", 
       element: <Bio /> 
-    }
-  ]
-}
+     }, 
+     {
+      path: "projects", 
+      element: <Projects /> 
+     }
+    ]
+  }])
 
-])
+
+
  
 
 ReactDOM.createRoot(document.getElementById('root')).render(
