@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import Home from './routes/home';
 import Layout from './components/layout';
+import Notes from './routes/notes';
+import NoteDetails, { NoteDetailsLoader } from './routes/NoteDetails';
+import { notesLoader } from './loaders';
 import Bio from './routes/bio';
+import Quotes from './routes/quotes';
 import Projects from './routes/projects';
 import {
   createRoutesFromElements,
@@ -11,6 +15,10 @@ import {
   RouterProvider, 
   Route,
 } from "react-router-dom";
+
+
+
+
 
 
 
@@ -23,11 +31,26 @@ const router = createBrowserRouter([
     children: [
       {
       index: true, 
-      element: <Home /> 
+      element: <Home />, 
+      loader: notesLoader
+     }, 
+     {
+      path: "notes", 
+      element: <Notes />, 
+      loader: notesLoader
+     }, 
+     {
+      path: "notes/:id", 
+      element: <NoteDetails/>, 
+      loader: NoteDetailsLoader
      }, 
      {
       path: "bio", 
       element: <Bio /> 
+     }, 
+     {
+      path: "quotes", 
+      element: <Quotes /> 
      }, 
      {
       path: "projects", 

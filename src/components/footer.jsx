@@ -4,7 +4,7 @@ export default function Footer(){
     return(
         <>
             <footer>
-                <h4>2023 Benny</h4>
+                <h5>2023 Benny</h5>
             </footer>
         </>
     )

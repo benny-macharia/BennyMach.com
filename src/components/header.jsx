@@ -5,9 +5,12 @@ export default function Header(){
         <>
             <header>
                 <Link className="site-logo" to={"/BennyMach.com/"}>BM</Link>
+                    <NavLink to={"notes"}>Notes</NavLink>
                     <NavLink to={"projects"}>Code vault</NavLink>
+                    <NavLink to={"quotes"}>Quotes</NavLink>
                     <NavLink to={"bio"}>Bio</NavLink>
             </header>
+            <hr className="header-hr"/>
         </>
     )
 }
